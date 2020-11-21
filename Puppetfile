@@ -58,8 +58,6 @@ mod 'puppet-unattended_upgrades', '4.0.0'
 
 # mariadb
 mod 'edestecd-mariadb', '2.1.1'
-mod 'puppetlabs-stdlib', '6.5.0'
-mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-mysql', '10.8.0'
 mod 'puppetlabs-resource_api', '1.1.0'
 mod 'puppetlabs-puppetserver_gem', '1.1.1'
