@@ -54,10 +54,10 @@ mod 'puppetlabs-apt',         '7.2.0'
 mod 'dalen-dnsquery',         '3.0.0'
 
 # Updates
-mod 'puppet-unattended_upgrades', '4.0.0'
+mod 'puppet-unattended_upgrades', '5.1.0'
 
 # mariadb
 mod 'edestecd-mariadb', '2.1.1'
-mod 'puppetlabs-mysql', '10.8.0'
+mod 'puppetlabs-mysql', '10.7.1'
 mod 'puppetlabs-resource_api', '1.1.0'
 mod 'puppetlabs-puppetserver_gem', '1.1.1'
