@@ -24,14 +24,10 @@ node 'manager.node.consul' {
 
 node 'dir.node.consul' {
   include ::role::directory_server
+  include '::mysql::server'
 }
 
 node 'mon.node.consul' {
   include ::role::monitoring_server
-}
-
-node 'server.mysql' {
-  include '::mysql::server'
-
 }
 
