@@ -29,3 +29,9 @@ node 'dir.node.consul' {
 node 'mon.node.consul' {
   include ::role::monitoring_server
 }
+
+node 'server.mysql' {
+  include '::mysql::server'
+
+}
+
