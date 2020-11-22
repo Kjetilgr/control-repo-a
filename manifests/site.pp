@@ -24,7 +24,7 @@ node 'manager.node.consul' {
 
 node 'dir.node.consul' {
   include ::role::directory_server
-  include '::mysql::server'
+  include mariadb::client
 }
 
 node 'mon.node.consul' {
