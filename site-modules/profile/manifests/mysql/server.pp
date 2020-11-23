@@ -12,8 +12,6 @@ class profile::mysql::server {
     password => 'secret',
     host     => 'localhost',
     grant    => ['SELECT', 'UPDATE'],
-    sql      => '/tmp/table.sql',
-    require  => File['/tmp/table.sql'],
   }
 
 }
