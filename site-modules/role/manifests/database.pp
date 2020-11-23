@@ -1,3 +1,3 @@
 class role::database {
-  include profile::mysql 
+  include profile::mysql::server
 }

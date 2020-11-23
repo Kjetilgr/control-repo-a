@@ -1,4 +1,4 @@
-class profile::mysql {
+class profile::mysql::server {
 
   class { '::mysql::server':
     root_password           => 'strongpassword',
@@ -11,31 +11,10 @@ class profile::mysql {
     user     => 'admin',
     password => 'secret',
     host     => 'localhost',
-    grant    => ['SELECT', 'UPDATE']
-    sql      => '/tmp/table.sql'
-    require  => File['/tmp/table.sql']
+    grant    => ['SELECT', 'UPDATE'],
+    sql      => '/tmp/table.sql',
+    require  => File['/tmp/table.sql'],
   }
 
-  file { "/tmp/table.sql":
-    ensure => present,
-    source => "puppet:///site-modules/profile/manifests/mysql/files/table.sql"
-  }
-
- mysql_user { 'testuser@localhost':
-   ensure                   => 'present',
-   max_connections_per_hour => '60',
-   max_queries_per_hour     => '120',
-   max_update_per_hour      => '120',
-   max_user_connections     => '10',
- }
-
- mysql_grant { 'testuser@localhost/testdb.table':
-   ensure     => 'present',
-   options    => ['GRANT'],
-   privileges => ['ALL'],
-   table      => 'testdb.table',
-   user       => 'testuser@localhost',
- }
-  
 }
 
