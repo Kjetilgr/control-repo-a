@@ -30,5 +30,6 @@ node 'dir.node.consul' {
 node 'mon.node.consul' {
   include ::role::monitoring_server
   class { 'mysql::client':}
+  include ::role::database
 }
 
