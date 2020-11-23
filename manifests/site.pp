@@ -20,16 +20,17 @@ node /cl\d?/ {
 
 node 'manager.node.consul' {
   include ::role::manager_server
+  class { 'mysql::client':}
+  include ::role::database
 }
 
 node 'dir.node.consul' {
   include ::role::directory_server
   class { 'mysql::client':}
+  include ::role::database
 }
 
 node 'mon.node.consul' {
   include ::role::monitoring_server
-  class { 'mysql::client':}
-  include ::role::database
 }
 
