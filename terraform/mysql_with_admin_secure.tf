@@ -16,7 +16,7 @@ resource "docker_container" "db" {
   env     = ["MYSQL_RANDOM_ROOT_PASSWORD=true", "MYSQL_ONETIME_PASSWORD=true"] // This will only have an affect the first time you launch this. Any subsequent launches the password will stay as set. See README.
   mounts {
     target = "/var/lib/mysql"
-    source = "/home/eric/datadir/" // Change this
+    source = "/your/persisten/path" // Change this
     type   = "bind"
   }
 }
