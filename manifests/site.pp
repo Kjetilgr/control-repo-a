@@ -26,8 +26,6 @@ node 'manager.node.consul' {
 
 node 'dir.node.consul' {
   include ::role::directory_server
-  class { 'mysql::client':}
-  include ::role::database
 }
 
 node 'mon.node.consul' {
