@@ -1,4 +1,6 @@
-This is the control repo used automatically by [IaC-Heat-A](https://gitlab.com/erikhje/iac-heat-a) on deployment.
+This is the common repository for group 12 in the IMT3005 Infrastructure as Code project. It contains configuration files and other items related to the project.
+
+This is the control repo used automatically by [IaC-Heat-A](https://github.com/Kjetilgr/iac-heat-a) on deployment.
 
 # Terraform
 
