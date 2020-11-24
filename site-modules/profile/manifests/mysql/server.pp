@@ -14,11 +14,13 @@ class profile::mysql::server {
     grant    => ['SELECT', 'UPDATE'],
   }
 
- mysql_user { 'testuser@localhost':
-   ensure                   => 'present',
-   max_connections_per_hour => '60,
-   max_queries_per_hour     => '120',
-   max_updates_per_hour     => '120',
-   max_user_connections     => '10',
+  mysql_user { 'testuser@localhost':
+    ensure                   => 'present',
+    max_connections_per_hour => '60',
+    max_queries_per_hour     => '120',
+    max_updates_per_hour     => '120',
+    max_user_connections     => '10',
+  }
+
 }
 
