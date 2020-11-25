@@ -1,6 +1,17 @@
 This is the common repository for group 12 in the IMT3005 Infrastructure as Code project. It contains configuration files and other items related to the project.
 
-This is the control repo used automatically by [IaC-Heat-A](https://github.com/Kjetilgr/iac-heat-a) on deployment.
+This is the control repo used automatically by [IaC-Heat-A](https://github.com/Kjetilgr/iac-heat-a) (private repository) on deployment.
+
+# Puppet
+
+1. Deploy the infrastructure. Wait a few minutes.
+2. Connect to the manager server.
+3. Deploy with r10k: 
+* r10k deploy environment -pv
+4. Trigger a Puppet run:
+* puppet agent -t
+5. mysql is up and running. Log in with e.g. admin:
+* mysql -u admin -p
 
 # Terraform
 
