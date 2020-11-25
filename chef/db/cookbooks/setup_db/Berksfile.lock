@@ -1,0 +1,10 @@
+DEPENDENCIES
+  mysql (~> 8.7.4)
+  setup_db
+    path: .
+    metadata: true
+
+GRAPH
+  mysql (8.7.4)
+  setup_db (0.1.0)
+    mysql (~> 8.0)

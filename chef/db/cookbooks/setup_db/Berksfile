@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'setupdb', path: './cookbooks/setup_db'
+cookbook 'mysql', path: './cookbooks/mysql'
