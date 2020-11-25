@@ -3,7 +3,7 @@ mysql2_chef_gem 'default' do
 end
 
 #define credentials
-creds = {
+connection_params = {
   :username => 'root',
   :password => 'p@ssword',
   #localhost
@@ -13,22 +13,28 @@ creds = {
 mysql_service 'default' do
   port '3306'
   version '5.5'
-  initial_root_password creds[:password]
+  initial_root_password connection_params[:password]
   action [:create, :start]
 end
 
 #create a new database
 mysql_database 'database' do
-  connection creds
+  connection connection_params
   action :create
 end
 
 #create a new db user with all perms
 mysql_database_user 'group12' do
-  connection creds
+  connection connection_params
   password 'passw0rd'
   privileges [:all]
   action [:create, :grant]
+end
+
+mysql_database 'database' do
+  connection mysql_connection_info
+  sql 'create table ice_cream (id int, flavor varchar(255), temperature int);'
+  action :query
 end
 
 
